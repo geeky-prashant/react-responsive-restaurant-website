@@ -165,8 +165,11 @@ const Wrapper = styled.section`
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.media.tab}) {
-    .cart-content {
-      width: 34rem;
+    .cart-panel {
+      .cart-content {
+        width: 34rem;
+        height: 100%;
+      }
     }
   }
 `;
