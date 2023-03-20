@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-import Login from "./components/Login/Login";
+import Account from "./components/Account/Account";
 import Error from "./components/Error/Error";
 
 const App = () => {
@@ -47,7 +47,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/account" element={<Account />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Newsletter />
