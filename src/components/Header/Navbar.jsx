@@ -38,8 +38,8 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/login">
-              Login/Register
+            <NavLink className="navbar-link" to="/account">
+              Account
             </NavLink>
           </li>
         </ul>
