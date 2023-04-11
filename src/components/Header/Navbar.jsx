@@ -33,11 +33,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/error">
-              Error Page
-            </NavLink>
-          </li>
-          <li>
             <NavLink className="navbar-link" to="/account">
               Account
             </NavLink>

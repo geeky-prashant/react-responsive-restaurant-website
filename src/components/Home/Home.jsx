@@ -15,9 +15,6 @@ const Home = () => {
   return (
     <Wrapper>
       <HeroSection {...data} />
-      <div className="container">
-        <h1 className="heading">OUR SPECIAL</h1>
-      </div>
       <Menu innerPage={true} />
     </Wrapper>
   );
