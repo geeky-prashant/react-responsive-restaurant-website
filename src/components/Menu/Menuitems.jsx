@@ -30,14 +30,14 @@ const Menuitems = (props) => {
 };
 
 const Wrapper = styled.section`
+  width: 47%;
   .product-card {
     margin-bottom: 1.5rem;
-    width: 32rem;
     .thumbnail {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.05);
       margin-bottom: 10px;
-      padding: 10px;
+      padding: 5px;
       display: flex;
       align-items: center;
       border-radius: 1rem;
@@ -46,11 +46,13 @@ const Wrapper = styled.section`
         display: block;
         width: 100%;
         border-radius: 1rem;
+        object-fit: cover;
+        height: 10rem;
       }
     }
     .prod-details {
       .name {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 1.6rem 0 0.2rem;
         display: block;
         text-overflow: ellipsis;
@@ -59,7 +61,7 @@ const Wrapper = styled.section`
         color: #232223;
       }
       .price {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: #575457;
         font-weight: 400;
         line-height: 1.5;
@@ -75,17 +77,20 @@ const Wrapper = styled.section`
   }
   .cart-buttons {
     display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
     margin-top: 1.5rem;
     .quantity-buttons {
-      width: fit-content;
+      width: 100%;
       display: flex;
+      justify-content: center;
       border: 0.2rem solid rgba(0, 0, 0, 0.2);
       border-radius: 0.5rem;
       margin-right: 1rem;
       height: 4rem;
       span {
         font-size: 1.8rem;
-        width: 4rem;
+        width: 6rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,7 +108,7 @@ const Wrapper = styled.section`
       }
     }
     .add-to-cart-button {
-      background-color: ${({ theme }) => theme.colors.bg};
+      background-color: ${({ theme }) => theme.colors.btn};
       color: ${({ theme }) => theme.colors.white};
       border-radius: 0.5rem;
       width: 100%;
@@ -118,9 +123,47 @@ const Wrapper = styled.section`
       outline: none;
     }
   }
+
   @media only screen and (min-width: ${({ theme }) => theme.media.tab}) {
+    width: 23%;
     .product-card {
-      width: 28rem;
+      .thumbnail {
+        padding: 10px;
+        img {
+          height: 18rem;
+        }
+      }
+      .prod-details {
+        .name {
+          font-size: 1.8rem;
+        }
+        .price {
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .cart-buttons {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.5rem;
+      gap: 0rem;
+      .quantity-buttons {
+        width: fit-content;
+        display: flex;
+        border: 0.2rem solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+        margin-right: 1rem;
+        height: 4rem;
+        span {
+          font-size: 1.8rem;
+          width: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #6b6b6b;
+        }
+      }
     }
   }
 `;
