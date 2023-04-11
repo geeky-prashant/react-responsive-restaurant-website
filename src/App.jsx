@@ -21,6 +21,7 @@ const App = () => {
       black: "#212529",
       helper: "#EDE42F",
       bg: "#B8001F",
+      btn: "#188D3E",
       footer_bg: "#0a1435",
       border: "rgba(98, 84, 243, 0.5)",
       hr: "#fff",
