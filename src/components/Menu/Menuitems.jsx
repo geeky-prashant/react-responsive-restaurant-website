@@ -14,11 +14,11 @@ const Menuitems = (props) => {
           <span className="price">&#8377;{props.price}</span>
         </div>
         <div className="cart-buttons">
-          <div className="quantity-buttons">
+          {/* <div className="quantity-buttons">
             <span>-</span>
             <span>5</span>
             <span>+</span>
-          </div>
+          </div> */}
           <button className="add-to-cart-button">
             <BsPlusCircleFill size={15} />
             ADD TO CART
@@ -110,17 +110,20 @@ const Wrapper = styled.section`
     .add-to-cart-button {
       background-color: ${({ theme }) => theme.colors.btn};
       color: ${({ theme }) => theme.colors.white};
-      border-radius: 0.5rem;
+      border-radius: 5rem;
       width: 100%;
-      height: 4rem;
+      height: 3.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       cursor: pointer;
       border: none;
       outline: none;
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.btnHover};
+      }
     }
   }
 
